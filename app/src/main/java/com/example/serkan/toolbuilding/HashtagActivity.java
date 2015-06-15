@@ -9,12 +9,11 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,7 +22,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Created by Serkan on 15.06.2015.
@@ -86,6 +84,7 @@ public class HashtagActivity extends Activity implements View.OnClickListener,Di
                     Log.e("n", "wechsel zu CameraTest");
 
                     startActivity(nextScreen);
+                    Toast.makeText(getApplicationContext(), "Das Foto wurde gespeichert!", Toast.LENGTH_LONG).show();
                     finish();
                 }
                 catch(JSONException ex) {
@@ -104,7 +103,7 @@ public class HashtagActivity extends Activity implements View.OnClickListener,Di
     public void onClick(View v) {
         // TODO Auto-generated method stub
         ad = new AlertDialog.Builder(this)
-                .setMessage("Möchten Sie das Foto wirklich löschen?")
+                .setMessage("Mï¿½chten Sie das Foto wirklich lï¿½schen?")
                 .setTitle("ToolBuilding")
                 .setPositiveButton("Ja", this)
                 .setNegativeButton("Nein", this)
