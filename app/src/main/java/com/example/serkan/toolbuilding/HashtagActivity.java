@@ -100,10 +100,18 @@ public class HashtagActivity extends Activity implements View.OnClickListener,Di
     }
 
     @Override
+    public void onBackPressed() {
+        //super.onDestroy();
+        //mGLView.onResume();
+        super.onBackPressed();
+        File file = new File(dir + "/" + date + ".jpg");
+        file.delete();
+    }
+    @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
         ad = new AlertDialog.Builder(this)
-                .setMessage("M�chten Sie das Foto wirklich l�schen?")
+                .setMessage((getString(R.string.DialogText)))
                 .setTitle("ToolBuilding")
                 .setPositiveButton("Ja", this)
                 .setNegativeButton("Nein", this)
@@ -118,7 +126,7 @@ public class HashtagActivity extends Activity implements View.OnClickListener,Di
         // TODO Auto-generated method stub
         switch(which){
             case DialogInterface.BUTTON_POSITIVE: // yes
-                File file = new File(dir);
+                File file = new File(dir + "/" + date + ".jpg");
                 file.delete();
                 Intent nextScreen = new Intent(getApplicationContext(), CamTestActivity.class);
 

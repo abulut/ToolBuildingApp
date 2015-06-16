@@ -3,11 +3,11 @@
 
     <string name="btn_capture">Click</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_main">CameraTest</string>
     <string name="title_image_hashtag">Hashtag</string>
 
-    <string name="camera_not_found">No camera harware found</string>
-    <string name="take_photo_help">Touch anywhere on screen to take picture</string>
+    <string name="camera_not_found">Die Camera Hardware kann nicht gefunden werden</string>
+    <string name="take_photo_help">Den Bildschrim berühren um Foto zu schießen</string>
+    <string name="DialogText">Möchten Sie das Foto wirklich löschen?</string>
 </resources>
